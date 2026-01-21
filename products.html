@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnyBuy — პროდუქტები</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="navbar">
+       <a class="logo" href="index.html" aria-label="Go to home">
+  <span class="dot" aria-hidden="true"></span>
+
+  <div class="logo-text">
+    <span class="logo-title">AnyBuy</span>
+   
+  </div>
+</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html">მთავარი</a>
+          <a href="products.html">პროდუქტები</a>
+          <a href="contact.html">კონტაქტი</a>
+          <a class="cart-pill" href="#cart">
+            🛒 კალათა <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE DRAWER ===== -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Mobile navigation">
+    <div class="drawer-top">
+      <strong>მენიუ</strong>
+      <button class="close" id="drawerClose">✕</button>
+    </div>
+    <a href="index.html">მთავარი</a>
+    <a href="products.html">პროდუქტები</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="#cart">🛒 კალათა <span class="cart-count" id="cartCountMobile">0</span></a>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="section">
+      <div class="container">
+        <h2>პროდუქტები</h2>
+        
+
+        <!-- CONTROLS -->
+        <div class="controls">
+          <input
+            type="search"
+            id="searchInput"
+            class="input"
+            placeholder="ძებნა დასახელებით..."
+          />
+
+          <select id="sortSelect" class="select">
+            <option value="default">სორტირება</option>
+            <option value="priceAsc">ფასი: ზრდადობით</option>
+            <option value="priceDesc">ფასი: კლებადობით</option>
+            <option value="titleAZ">დასახელება: A-Z</option>
+            <option value="titleZA">დასახელება: Z-A</option>
+          </select>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div class="grid" id="productsGrid">
+          <!-- JS აქ ჩაამატებს პროდუქტებს -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CART SECTION -->
+    <section class="section" id="cart">
+      <div class="container">
+        <h2>კალათა</h2>
+        <p class="lead">ინახება localStorage-ში</p>
+
+        <div class="card">
+          <div class="card-body" id="cartBox">
+            <!-- JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>PACK & GO</strong>
+          <p class="muted" style="margin:8px 0 0;">
+            Hiking & Camping Gear Store.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">კომპანია</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="products.html">პროდუქტები</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">მხარდაჭერა</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="contact.html">დახმარება</a></li>
+            <li><a href="contact.html#faq">ხშირად დასმული კითხვები</a></li>
+            <li><a href="contact.html">დაბრუნება</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">სოციალური ქსელი</h4>
+          <div class="social" aria-label="Social links">
+            <a class="btn" href="#" aria-label="Instagram">Instagram</a>
+            <a class="btn" href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border); padding-top:16px; margin-top:24px; text-align:center; color:var(--muted); font-size:13px;">
+        © 2026 PACK & GO. ყველა უფლება დაცულია.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== COOKIES ===== -->
+  <div class="cookies" id="cookiesBanner">
+    <p>ეს საიტი იყენებს cookies-ს გამოცდილების გასაუმჯობესებლად.</p>
+    <button class="btn primary" id="cookiesAccept">Accept</button>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTopBtn">↑</button>
+
+  <!-- ===== JS (მნიშვნელოვანია თანმიმდევრობა!) ===== -->
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+
+</body>
+</html>

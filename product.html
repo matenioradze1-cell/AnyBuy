@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnyBuy — Product</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="navbar">
+        <a class="logo" href="index.html" aria-label="Go to home">
+  <span class="dot" aria-hidden="true"></span>
+
+  <div class="logo-text">
+    <span class="logo-title">AnyBuy</span>
+    <small class="logo-subtitle">
+      Hiking &amp; Camping Gear Store
+    </small>
+  </div>
+</a>
+        <nav class="nav-links">
+          <a href="index.html">მთავარი</a>
+          <a href="products.html">პროდუქტები</a>
+          <a href="contact.html">კონტაქტი</a>
+          <a class="cart-pill" href="products.html#cart">
+            🛒 კალათა <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-top">
+      <strong>მენიუ</strong>
+      <button class="close" id="drawerClose" aria-label="Close menu">✕</button>
+    </div>
+    <a href="index.html">მთავარი</a>
+    <a href="products.html">პროდუქტები</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="products.html#cart">🛒 კალათა <span class="cart-count" id="cartCountMobile">0</span></a>
+  </aside>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <a class="btn" href="products.html">← დაბრუნება</a>
+
+        <div class="product-layout" style="margin-top:16px;">
+          <figure class="product-media">
+            <img id="productImage" src="" alt="Product image"/>
+            <figcaption class="muted" style="padding-top:10px;">ფოტო — demo</figcaption>
+          </figure>
+
+          <article class="product-info">
+            <h2 id="productTitle" style="margin-top:0;"></h2>
+            <p class="lead" id="productDesc"></p>
+
+            <div class="kv" id="productTags"></div>
+
+            <div class="price-row" style="margin-top:14px;">
+              <div>
+                <div class="muted">ფასი</div>
+                <div class="price" id="productPrice"></div>
+              </div>
+
+              <button class="btn primary" id="addToCartBtn">კალათაში დამატება</button>
+            </div>
+
+            <p class="muted" style="margin-top:14px;">
+              ეს გვერდი იღებს მონაცემს query param-ით (მაგ: <code>?id=1</code>) და fetch-ით აჩვენებს პროდუქტს.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>PACK & GO</strong>
+          <p class="muted" style="margin:8px 0 0;">
+            Hiking & Camping Gear Store.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">კომპანია</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="products.html">პროდუქტები</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">მხარდაჭერა</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="contact.html">დახმარება</a></li>
+            <li><a href="contact.html#faq">ხშირად დასმული კითხვები</a></li>
+            <li><a href="contact.html">დაბრუნება</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">სოციალური ქსელი</h4>
+          <div class="social" aria-label="Social links">
+            <a class="btn" href="#" aria-label="Instagram">Instagram</a>
+            <a class="btn" href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border); padding-top:16px; margin-top:24px; text-align:center; color:var(--muted); font-size:13px;">
+        © 2026 PACK & GO. ყველა უფლება დაცულია.
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookies" id="cookiesBanner" role="dialog" aria-live="polite" aria-label="Cookies notification">
+    <p>ეს საიტი იყენებს cookies-ს გამოცდილების გასაუმჯობესებლად. Accept-ის შემდეგ შეტყობინება აღარ გამოჩნდება.</p>
+    <button class="btn primary" id="cookiesAccept">Accept</button>
+  </div>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

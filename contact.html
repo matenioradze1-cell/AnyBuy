@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnyBuy — Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="navbar">
+        <a class="logo" href="index.html" aria-label="Go to home">
+  <span class="dot" aria-hidden="true"></span>
+
+  <div class="logo-text">
+    <span class="logo-title">AnyBuy</span>
+    
+  </div>
+</a>
+        <nav class="nav-links">
+          <a href="index.html">მთავარი</a>
+          <a href="products.html">პროდუქტები</a>
+          <a href="contact.html">კონტაქტი</a>
+          <a class="cart-pill" href="products.html#cart">
+            🛒 კალათა <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </nav>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-top">
+      <strong>მენიუ</strong>
+      <button class="close" id="drawerClose" aria-label="Close menu">✕</button>
+    </div>
+    <a href="index.html">მთავარი</a>
+    <a href="products.html">პროდუქტები</a>
+    <a href="contact.html">კონტაქტი</a>
+    <a href="products.html#cart">🛒 კალათა <span class="cart-count" id="cartCountMobile">0</span></a>
+  </aside>
+
+  <main>
+    <section class="section">
+      <div class="container">
+<h2>AnyBuy — Contact</h2>
+
+       
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">სახელი და გვარი *</label>
+              <input id="fullName" name="fullName" type="text" placeholder="მაგ: Mate K." />
+              <div class="error" id="errName"></div>
+            </div>
+
+            <div class="field">
+              <label for="email">ელ-ფოსტა *</label>
+              <input id="email" name="email" type="email" placeholder="example@mail.com" />
+              <div class="error" id="errEmail"></div>
+            </div>
+
+            <div class="field">
+              <label for="password">პაროლი *</label>
+              <div class="pw-wrap">
+                <input id="password" name="password" type="password" placeholder="Min 8, 1 uppercase, 1 number" />
+                <button class="pw-toggle" type="button" id="pwToggle">Show</button>
+              </div>
+              <div class="error" id="errPassword"></div>
+            </div>
+
+            <div class="field">
+              <label for="confirm">დაადასტურე პაროლი *</label>
+              <input id="confirm" name="confirm" type="password" placeholder="Repeat password" />
+              <div class="error" id="errConfirm"></div>
+            </div>
+
+            <div class="field" style="grid-column: 1 / -1;">
+              <label for="message">მესიჯი *</label>
+              <textarea id="message" name="message" placeholder="მოგვწერე მოკლედ რა გჭირდება..."></textarea>
+              <div class="error" id="errMessage"></div>
+            </div>
+
+            <div class="field" style="grid-column: 1 / -1;">
+              <label style="display:flex; align-items:center; gap:10px;">
+                <input id="agree" type="checkbox" />
+                ვეთანხმები წესებს და პირობებს *
+              </label>
+              <div class="error" id="errAgree"></div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="btn primary" type="submit">გაგზავნა</button>
+            <button class="btn" type="reset">გასუფთავება</button>
+          </div>
+
+      
+        </form>
+
+        <!-- FAQ Section -->
+        <section class="section" id="faq" style="padding-top:0">
+          <h2>ხშირად დასმული კითხვები</h2>
+          <div class="grid" style="grid-template-columns:1fr;">
+            <article class="card">
+              <div class="card-body">
+                <h3 class="title">როგორ მუშაობს დაბრუნება?</h3>
+                <p class="muted">პროდუქტის მიღებიდან 30 დღის განმავლობაში შეგიძლიათ დაბრუნება. დაგვიკავშირდით კონტაქტის ფორმით.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h3 class="title">რამდენი ხანი გრძელდება გარანტია?</h3>
+                <p class="muted">გარანტია გრძელდება 1 წელი ყველა პროდუქტზე. დეფექტის შემთხვევაში დაგვიკავშირდით.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-body">
+                <h3 class="title">შესაძლებელია ონლაინ გადახდა?</h3>
+                <p class="muted">დიახ, მხარდაჭერილია Visa, Mastercard და სხვა სერვისები (დემო).</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" style="padding-bottom:0">
+          <h2>მისამართი</h2>
+          <address class="muted">
+            Tbilisi, Georgia<br/>
+            Email: anybuy@gmail.com<br/>
+            Phone: +995 555 20 87 84
+          </address>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>PACK & GO</strong>
+          <p class="muted" style="margin:8px 0 0;">
+            Hiking & Camping Gear Store.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">კომპანია</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="index.html">მთავარი</a></li>
+            <li><a href="products.html">პროდუქტები</a></li>
+            <li><a href="contact.html">კონტაქტი</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">მხარდაჭერა</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li><a href="contact.html">დახმარება</a></li>
+            <li><a href="contact.html#faq">ხშირად დასმული კითხვები</a></li>
+            <li><a href="contact.html">დაბრუნება</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 12px; color:var(--text); font-size:16px;">სოციალური ქსელი</h4>
+          <div class="social" aria-label="Social links">
+            <a class="btn" href="#" aria-label="Instagram">Instagram</a>
+            <a class="btn" href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border); padding-top:16px; margin-top:24px; text-align:center; color:var(--muted); font-size:13px;">
+        © 2026 PACK & GO. ყველა უფლება დაცულია.
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookies" id="cookiesBanner" role="dialog" aria-live="polite" aria-label="Cookies notification">
+    <p>ეს საიტი იყენებს cookies-ს გამოცდილების გასაუმჯობესებლად. Accept-ის შემდეგ შეტყობინება აღარ გამოჩნდება.</p>
+    <button class="btn primary" id="cookiesAccept">Accept</button>
+  </div>
+
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>
